@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 
+:root {
+  --Dark-Gray: hsl(0, 0%, 63%);
+  --Black: hsl(0, 0%, 0%);
+  --White: hsl(0, 0%, 100%);
+  --Very-Dark-Gray: hsl(0, 0%, 27%);
+}
+
 body {
   font-family: "League Spartan", sans-serif;
   font-weight: 500, 600, 700;
@@ -9,75 +16,124 @@ body {
   align-items: center;
 }
 
-@media (min-width: 375px) {
-  .main-container {
-    max-width: 375px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-  }
+.main-container {
+  width: 100%;
+  height: auto;
 }
 
-@media (min-width: 1440px) {
-  .main-container {
-    max-width: 1440px;
-    max-height: 1080px;
-  }
-
-  .flex-container {
-    display: flex;
-    flex-direction: row;
-  }
-}
-
-.tt {
+.flex-container1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 50px;
 }
 
-.w-600 {
-  width: 600px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  color: var(--White);
 }
 
-.item1 {
-  width: 840px;
-  height: 534px;
-}
-
-.bg1 {
-  background-image: url("../images/desktop-image-hero-1.jpg");
-
+.item1-row1 {
+  background-image: url(../images/desktop-image-hero-1.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
+  width: 60vw;
+  height: 75vh;
 }
 
-.relative {
+.item2-row1 {
+  width: 40vw;
+  height: 75vh;
+  border: 1px black solid;
   position: relative;
-}
-
-.fix-lb {
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 
 .flex {
   display: flex;
 }
 
-.border {
+.item2-row1 .title-paragraph {
+  height: 75vh;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  
+  
+  max-width: 520px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.item2-row1 .title-paragraph p {
+  text-align: start;
+  color: var(--Dark-Gray);
+}
+
+.link-non-dashed {
+  text-decoration: none;
+  color: var(--Dark);
+}
+
+.arrows-flex {
+  position: absolute;   /* Se posiciona dentro del contenedor */
+  bottom: 0;            /* Pegado abajo */
+  left: 0;              /* Pegado a la izquierda */
+  display: flex;
+}
+
+.arrow1, .arrow2 {
+  width: 120px;
+  height: 80px;
+  background-color: var(--Black);
+}
+
+.img-left, .img-right {
+  position: relative;
+  left: 45%;
+  top: 35%;
+}
+
+/* ------------- Hecho 13/11/2025 en videollamada Discord ------------------ */
+
+/* .w-600 {
+  width: 600px;
+} */
+
+/* .item1 {
+  width: 840px;
+  height: 534px;
+} */
+
+/* .bg1 {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+
+  background-repeat: no-repeat;
+} */
+
+/* .relative {
+  position: relative;
+} */
+
+/* .fix-lb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+} */
+
+/* .flex {
+  display: flex;
+} */
+
+/* .border {
   border: 2px solid red;
-}
+} */
 
-.bg-black {
+/* .bg-black {
   background-color: black;
-}
+} */
 
-.p-3 {
+/* .p-3 {
   padding: 10px;
-}
+} */
