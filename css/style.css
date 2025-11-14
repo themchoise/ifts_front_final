@@ -4,4 +4,80 @@ body {
   font-family: "League Spartan", sans-serif;
   font-weight: 500, 600, 700;
   font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 375px) {
+  .main-container {
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-container {
+    max-width: 1440px;
+    max-height: 1080px;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.tt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.w-600 {
+  width: 600px;
+}
+
+.item1 {
+  width: 840px;
+  height: 534px;
+}
+
+.bg1 {
+  background-image: url("../images/desktop-image-hero-1.jpg");
+
+  background-repeat: no-repeat;
+}
+
+.relative {
+  position: relative;
+}
+
+.fix-lb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.border {
+  border: 2px solid red;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.p-3 {
+  padding: 10px;
 }
