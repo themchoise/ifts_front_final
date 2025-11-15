@@ -115,9 +115,9 @@ nav ul {
 }
 
 .arrows-flex {
-  position: absolute;   /* Se posiciona dentro del contenedor */
-  bottom: 0;            /* Pegado abajo */
-  left: 0;              /* Pegado a la izquierda */
+  position: absolute;
+  bottom: 0;            
+  left: 0;              
   display: flex;
 }
 
@@ -125,6 +125,10 @@ nav ul {
   width: 120px;
   height: 80px;
   background-color: var(--Black);
+}
+
+.arrow1:hover , .arrow2:hover {
+  background-color: var(--Very-Dark-Gray);
 }
 
 .img-left, .img-right {
