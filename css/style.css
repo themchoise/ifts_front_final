@@ -16,6 +16,44 @@ body {
   align-items: center;
 }
 
+.title-page {
+  margin-left: 50px;
+  margin-top: 25px;
+  color: var(--White);
+}
+
+a.a-list {
+  margin-top: 33px;
+  text-decoration: none;
+  text-decoration-color: var(--White);
+  color: var(--White);
+}
+
+a.a-list:active {
+  text-decoration: underline;
+  text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
+}
+
+a.a-list:focus {
+  text-decoration: underline;
+  text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
+}
+
+a.a-list:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
+}
+
+nav ul {
+  margin-top: 30px;
+}
+
 .main-container {
   width: 100%;
   height: auto;
