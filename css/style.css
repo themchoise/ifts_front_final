@@ -22,16 +22,32 @@ body {
   color: var(--White);
 }
 
-.a-list {
+a.a-list {
   margin-top: 33px;
   text-decoration: none;
   text-decoration-color: var(--White);
   color: var(--White);
 }
 
-.list:active {
-  text-decoration: dashed 2px;
+a.a-list:active {
+  text-decoration: underline;
   text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
+}
+
+a.a-list:focus {
+  text-decoration: underline;
+  text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
+}
+
+a.a-list:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--White);
+  color: var(--White);
+  text-decoration-thickness: 3px;
 }
 
 nav ul {
