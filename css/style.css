@@ -16,6 +16,28 @@ body {
   align-items: center;
 }
 
+.title-page {
+  margin-left: 50px;
+  margin-top: 25px;
+  color: var(--White);
+}
+
+.a-list {
+  margin-top: 33px;
+  text-decoration: none;
+  text-decoration-color: var(--White);
+  color: var(--White);
+}
+
+.list:active {
+  text-decoration: dashed 2px;
+  text-decoration-color: var(--White);
+}
+
+nav ul {
+  margin-top: 30px;
+}
+
 .main-container {
   width: 100%;
   height: auto;
