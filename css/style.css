@@ -16,10 +16,16 @@ body {
   align-items: center;
 }
 
-.title-page {
-  margin-left: 50px;
-  margin-top: 25px;
-  color: var(--White);
+nav img {
+  width: 30px;
+  height: 20px;
+  padding: 25px;
+  padding-left: 50px;
+}
+
+ul {
+  position: relative;
+  right: 30px;
 }
 
 a.a-list {
