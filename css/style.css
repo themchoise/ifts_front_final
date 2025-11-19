@@ -62,10 +62,9 @@ nav ul {
 
 .main-container {
   width: 100%;
-  height: auto;
 }
 
-.flex-container1 {
+.flex {
   display: flex;
 }
 
@@ -80,19 +79,55 @@ nav ul {
   background-image: url(../images/desktop-image-hero-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 60vw;
-  height: 75vh;
+
+  width: 830px;
+  height: 534px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.bottom-title {
+  padding: 60px;
+}
+
+.item1-row2 {
+  background-image: url(../images/image-about-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.item3-row3 {
+  background-image: url(../images/image-about-light.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .item2-row1 {
-  width: 40vw;
-  height: 75vh;
-  border: 1px black solid;
+  position: relative;
+}
+
+.item2-row2 {
   position: relative;
 }
 
 .flex {
   display: flex;
+}
+
+.col1 {
+  width: 28%;
+}
+.col2 {
+  width: 46%;
+}
+.col3 {
+  width: 30%;
+}
+
+.bt-section {
+  height: 250px;
 }
 
 .item2-row1 .title-paragraph {
@@ -102,9 +137,8 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
-  
-  
+  align-items: flex-start;
+
   max-width: 520px;
   padding-left: 100px;
   padding-right: 100px;
@@ -122,22 +156,25 @@ nav ul {
 
 .arrows-flex {
   position: absolute;
-  bottom: 0;            
-  left: 0;              
+  bottom: 0;
+  left: 0;
   display: flex;
 }
 
-.arrow1, .arrow2 {
+.arrow1,
+.arrow2 {
   width: 120px;
   height: 80px;
   background-color: var(--Black);
 }
 
-.arrow1:hover , .arrow2:hover {
+.arrow1:hover,
+.arrow2:hover {
   background-color: var(--Very-Dark-Gray);
 }
 
-.img-left, .img-right {
+.img-left,
+.img-right {
   position: relative;
   left: 45%;
   top: 35%;
