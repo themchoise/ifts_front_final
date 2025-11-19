@@ -7,10 +7,8 @@ function updateNavigation() {
   console.log(`Viewport width: ${viewportWidth}px`);
 
   if (viewportWidth < 768) {
-    // Mobile: ocultar nav y mostrar hamburguesa
     mainNav.style.display = "none";
 
-    // Crear hamburguesa si no existe
     if (!hamburgerMenu) {
       hamburgerMenu = document.createElement("div");
       hamburgerMenu.className = "hamburger-menu";
