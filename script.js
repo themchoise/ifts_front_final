@@ -6,7 +6,7 @@ function updateNavigation() {
   const viewportWidth = window.innerWidth;
   console.log(`Viewport width: ${viewportWidth}px`);
 
-  if (viewportWidth < 768) {
+  if (viewportWidth <= 700) {
     mainNav.style.display = "none";
 
     if (!hamburgerMenu) {
