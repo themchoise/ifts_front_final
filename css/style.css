@@ -195,7 +195,6 @@ p {
   background-color: var(--Black);
 }
 
-<<<<<<< HEAD
 .arrow1:hover,
 .arrow2:hover {
   background-color: var(--Very-Dark-Gray);
@@ -268,10 +267,9 @@ p {
     overflow: visible;
   }
 }
-=======
+
 .img-left, .img-right {
   position: relative;
   left: 45%;
   top: 35%;
 }
->>>>>>> a58427562ef026e87d6b8074aebee3f767ef2271
