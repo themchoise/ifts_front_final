@@ -9,7 +9,7 @@
 
 body {
   font-family: "League Spartan", sans-serif;
-  font-weight: 500, 600, 700;
+  font-weight: 500;
   font-size: 12px;
   display: flex;
   justify-content: center;
@@ -62,10 +62,13 @@ nav ul {
 
 .main-container {
   width: 100%;
-  height: auto;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.flex-container1 {
+.flex {
   display: flex;
 }
 
@@ -77,17 +80,46 @@ nav ul {
 }
 
 .item1-row1 {
-  background-image: url(../images/desktop-image-hero-1.jpg);
+  /* Mobile-first: usar imagen mobile por defecto */
+  background-image: url(../images/mobile-image-hero-1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 60vw;
-  height: 75vh;
+  width: 100%;
+  height: 360px;
+  margin-bottom: 16px;
+  position: relative; /* para posicionar flechas dentro del hero */
+}
+
+p {
+  line-height: 1.5;
+}
+
+.bottom-title {
+  padding: 60px;
+}
+
+.item1-row2 {
+  background-image: url(../images/image-about-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
+}
+
+.item3-row3 {
+  background-image: url(../images/image-about-light.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 200px;
 }
 
 .item2-row1 {
-  width: 40vw;
-  height: 75vh;
-  border: 1px black solid;
+  position: relative;
+  background-color: var(--White);
+}
+
+.item2-row2 {
   position: relative;
 }
 
@@ -95,19 +127,40 @@ nav ul {
   display: flex;
 }
 
+/* Mobile-first: apilar en columna */
+.top-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.bt-section {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.col1 {
+  width: 100%;
+}
+.col2 {
+  width: 100%;
+}
+.col3 {
+  width: 100%;
+}
+
 .item2-row1 .title-paragraph {
-  height: 75vh;
+  height: auto;
   box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
-  
-  
+  align-items: flex-start;
+
   max-width: 520px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .item2-row1 .title-paragraph p {
@@ -117,19 +170,28 @@ nav ul {
 
 .link-non-dashed {
   text-decoration: none;
-  color: var(--Dark);
+  color: var(--Black);
 }
 
+/* Mobile: flechas visualmente sobre el hero (están en item2-row1 pero se posicionan arriba) */
 .arrows-flex {
-  position: absolute;   /* Se posiciona dentro del contenedor */
-  bottom: 0;            /* Pegado abajo */
-  left: 0;              /* Pegado a la izquierda */
+  position: absolute;
+  top: calc(
+    -360px + (360px - 56px - 16px)
+  ); /* subir hacia el hero menos su margen bottom */
+  right: 0;
   display: flex;
+  margin: 0;
+  z-index: 10;
 }
 
-.arrow1, .arrow2 {
-  width: 120px;
-  height: 80px;
+.arrow1,
+.arrow2 {
+  width: 80px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--Black);
 }
 
