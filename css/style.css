@@ -268,45 +268,8 @@ p {
   }
 }
 
-/* ------------- Hecho 13/11/2025 en videollamada Discord ------------------ */
-
-/* .w-600 {
-  width: 600px;
-} */
-
-/* .item1 {
-  width: 840px;
-  height: 534px;
-} */
-
-/* .bg1 {
-  background-image: url("../images/desktop-image-hero-1.jpg");
-
-  background-repeat: no-repeat;
-} */
-
-/* .relative {
+.img-left, .img-right {
   position: relative;
-} */
-
-/* .fix-lb {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-} */
-
-/* .flex {
-  display: flex;
-} */
-
-/* .border {
-  border: 2px solid red;
-} */
-
-/* .bg-black {
-  background-color: black;
-} */
-
-/* .p-3 {
-  padding: 10px;
-} */
+  left: 45%;
+  top: 35%;
+}
