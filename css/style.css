@@ -1,312 +1,288 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
 
 :root {
-  --Dark-Gray: hsl(0, 0%, 63%);
-  --Black: hsl(0, 0%, 0%);
-  --White: hsl(0, 0%, 100%);
-  --Very-Dark-Gray: hsl(0, 0%, 27%);
+    --Dark-Gray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --Very-Dark-Gray: hsl(0, 0%, 27%);
 }
 
 body {
-  font-family: "League Spartan", sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav img {
-  width: 30px;
-  height: 20px;
-  padding: 25px;
-  padding-left: 50px;
-}
-
-ul {
-  position: relative;
-  right: 30px;
-}
-
-a.a-list {
-  margin-top: 33px;
-  text-decoration: none;
-  text-decoration-color: var(--White);
-  color: var(--White);
-}
-
-a.a-list:active {
-  text-decoration: underline;
-  text-decoration-color: var(--White);
-  color: var(--White);
-  text-decoration-thickness: 3px;
-}
-
-a.a-list:focus {
-  text-decoration: underline;
-  text-decoration-color: var(--White);
-  color: var(--White);
-  text-decoration-thickness: 3px;
-}
-
-a.a-list:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--White);
-  color: var(--White);
-  text-decoration-thickness: 3px;
-}
-
-nav ul {
-  margin-top: 30px;
-}
-
-.main-container {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.flex {
-  display: flex;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  color: var(--White);
-}
-
-.item1-row1 {
-  /* Mobile-first: usar imagen mobile por defecto */
-  background-image: url(../images/mobile-image-hero-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 360px;
-  margin-bottom: 16px;
-  position: relative; /* para posicionar flechas dentro del hero */
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 p {
-  line-height: 1.5;
+    line-height: 1.5;
+    color: var(--Dark-Gray);
 }
 
-.bottom-title {
-  padding: 60px;
+nav {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    z-index: 30;
 }
 
-.item1-row2 {
-  background-image: url(../images/image-about-dark.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 200px;
+/* Botón con 3 barritas sólo en mobile */
+nav::before {
+    content: "";
+    width: 22px;
+    height: 16px;
+    background-image: url("../images/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: block;
 }
 
-.item3-row3 {
-  background-image: url(../images/image-about-light.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 200px;
+nav img {
+    max-height: 22px;
+    width: auto;
 }
 
-.item2-row1 {
-  position: relative;
-  background-color: var(--White);
+/* Menú oculto en mobile porque se usa el menú hamburguesa que no es necesario hacer */
+nav ul {
+    display: none;
 }
 
-.item2-row2 {
-  position: relative;
+.main-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.flex {
-  display: flex;
+.item1-row1 {
+    background-image: url(../images/mobile-image-hero-1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    min-height: 320px;
+    margin-bottom: 16px;
+    position: relative;
 }
 
-/* Mobile-first: apilar en columna */
 .top-section {
-  display: flex;
-  flex-direction: column;
-}
-
-.bt-section {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-}
-
-.col1 {
-  width: 100%;
-}
-.col2 {
-  width: 100%;
-}
-.col3 {
-  width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .item2-row1 .title-paragraph {
-  height: auto;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-
-  max-width: 520px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.item2-row1 .title-paragraph p {
-  text-align: start;
-  color: var(--Dark-Gray);
+    padding: 24px;
+    max-width: 520px;
 }
 
 .link-non-dashed {
-  text-decoration: none;
-  color: var(--Black);
+    text-decoration: none;
+    color: var(--Black);
 }
 
-/* Mobile: flechas visualmente sobre el hero (están en item2-row1 pero se posicionan arriba) */
+/* Flechas negras en mobile */
 .arrows-flex {
-  position: absolute;
-  top: calc(
-    -360px + (360px - 56px - 16px)
-  ); /* subir hacia el hero menos su margen bottom */
-  right: 0;
-  display: flex;
-  margin: 0;
-  z-index: 10;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
 }
 
 .arrow1,
 .arrow2 {
-  width: 80px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--Black);
+    width: 60px;
+    height: 60px;
+    background-color: var(--Black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow1:hover,
 .arrow2:hover {
-  background-color: var(--Very-Dark-Gray);
+    background-color: var(--Very-Dark-Gray);
 }
 
-.img-left,
-.img-right {
-  position: static;
+.bt-section {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Desktop (> 700px) */
+.item1-row2,
+.item3-row3 {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 35vh;
+    min-height: 240px;
+}
+
+.item1-row2 {
+    background-image: url(../images/image-about-dark.jpg);
+}
+
+.item3-row3 {
+    background-image: url(../images/image-about-light.jpg);
+}
+
+.bottom-title {
+    padding: 60px;
+}
+
+/* Desktop */
 @media (min-width: 701px) {
-  .main-container {
-    max-width: 1440px;
-    max-height: 1080px;
-    overflow: auto;
-  }
 
-  .top-section {
-    flex-direction: row;
-  }
+    /* NAV Desktop */
+    nav {
+        top: 40px;
+        left: 60px;
+        gap: 40px;
+    }
 
-  .bt-section {
-    flex-direction: row;
-    height: 250px;
-  }
+    /* Quitar icono de hamburguesa */
+    nav::before {
+        display: none;
+    }
 
-  .col1 {
-    width: 28%;
-  }
-  .col2 {
-    width: 46%;
-  }
-  .col3 {
-    width: 30%;
-  }
+    /* Mostrar menú */
+    nav ul {
+        display: flex;
+        gap: 35px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 
-  .item1-row1 {
-    background-image: url(../images/desktop-image-hero-1.jpg);
-    width: 830px;
-    height: 534px;
-    margin-bottom: 0;
-  }
+    nav ul li a {
+        color: var(--White);
+        font-size: 15px;
+        text-decoration: none;
+        font-weight: 600;
+    }
 
-  .item2-row1 .title-paragraph {
-    height: 75vh;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+    nav ul li a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
 
-  /* Desktop: flechas en item2-row1, esquina inferior izquierda */
-  .arrows-flex {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: auto;
-    top: auto;
-  }
+    nav img {
+        max-height: 22px;
+    }
 
-  .arrow1,
-  .arrow2 {
-    width: 120px;
-    height: 80px;
-  }
+    .main-container {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .top-section {
+        display: grid;
+        grid-template-columns: 2fr 1.1fr;
+        height: 534px;
+    }
+
+    .item1-row1 {
+        background-image: url(../images/desktop-image-hero-1.jpg);
+        height: 534px;
+        margin: 0;
+    }
+
+    .item2-row1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 90px;
+    }
+
+    .item2-row1 .title-paragraph {
+        padding: 0;
+        max-width: 420px;
+    }
+
+    /* Flechas negras en Desktop */
+    .arrows-flex {
+        display: flex !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        transform: translateX(100%);
+        /* Mueve las flechas al borde izquierdo del contenedor de texto */
+    }
+
+    .item2-row1 {
+        position: relative;
+        /* Le da un contexto para posicionar las flechas */
+    }
+
+    .arrow1,
+    .arrow2 {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--Black);
+    }
+
+    .arrow1:hover,
+    .arrow2:hover {
+        background-color: var(--Very-Dark-Gray);
+    }
+
+    /* Segunda fila desktop */
+    .bt-section {
+        display: grid;
+        grid-template-columns: 1.1fr 1.4fr 1.1fr;
+        height: 260px;
+    }
 }
 
-/* Desktop grande (>= 1440px) - sin overflow */
+/* Desktop >= 1440px */
 @media (min-width: 1440px) {
-  .main-container {
-    overflow: visible;
-  }
+    .main-container {
+        overflow: visible;
+    }
 }
 
 /* ------------- Hecho 13/11/2025 en videollamada Discord ------------------ */
-
 /* .w-600 {
-  width: 600px;
+width: 600px;
 } */
-
 /* .item1 {
-  width: 840px;
-  height: 534px;
+width: 840px;
+height: 534px;
 } */
-
 /* .bg1 {
-  background-image: url("../images/desktop-image-hero-1.jpg");
-
-  background-repeat: no-repeat;
+background-image: url("../images/desktop-image-hero-1.jpg");
+background-repeat: no-repeat;
 } */
-
 /* .relative {
-  position: relative;
+position: relative;
 } */
-
 /* .fix-lb {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+position: absolute;
+left: 0;
+bottom: 0;
 } */
-
 /* .flex {
-  display: flex;
+display: flex;
 } */
-
 /* .border {
-  border: 2px solid red;
+border: 2px solid red;
 } */
-
 /* .bg-black {
-  background-color: black;
+background-color: black;
 } */
-
 /* .p-3 {
-  padding: 10px;
+padding: 10px;
 } */
